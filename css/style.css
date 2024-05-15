@@ -1,0 +1,369 @@
+.cuadro_login {
+    border: 1px solid blue;
+    padding: 10px;
+    width: 300px;
+}
+.margen_logo{
+    margin-right: 6px;
+}
+
+
+.boton_ingresar {
+    width: 200px;
+    margin: auto
+}
+
+.disponible {
+    color: green;
+    font-weight: bolder;;
+}
+
+.precio_oferta {
+    color: red;
+}
+
+.foto_ficha {
+    height: 600px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo_producto_ficha {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.oferta_en_ficha {
+    color: blue;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.precio_oferta_subscrito {
+    font-size: 45px;
+}
+
+.descripcion_ficha {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.custom-border {
+    border-width: 3px;
+}
+
+.naranjita {
+    color: #FF5A2C;
+}
+
+.navbar-brand {
+    color: #FF5A2C;
+}
+
+.btn {
+    font-size: 17px;
+    background-color: #FF5A2C;
+    
+}
+
+/*registrar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    margin-right: 10px;
+}
+
+.registro_foto {
+    height: 200px;
+}
+
+/*nosotros*/
+
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.nosotros {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos para las tarjetas del equipo */
+.equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-Nojotros {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+
+/* ------*/
+
+
+
+.login {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Estilos para el formulario de ingreso */
+.campo {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #8b8b8b81;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-content h1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+
+
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
+    color: #000000;
+}
+
+.footer-section ul li a{
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.footer p{
+    color: #000000;
+    
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.text-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 100px;
+    
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: #ff5100;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.footer-bottom {
+    background-color: #fdfdfd9d;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer h1{
+    width: 100px;
+    font-weight: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+
+    
+}
+
+.footer-section {
+    color: #000000;
+    text-align: left;
+}
+
+/*boleta*/
+
+#boleta_tabla_estados {
+    float: right;
+}
+
+#boleta_tabla_estados td {
+    padding-right: 20px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.titulo_miscompras {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.subrayado {
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.alinear {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.alinear_boton {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.alinear_boton_der {
+    text-align: right;
+    margin-left: 1400px;
+}
+
+.subrayado_ventas {
+    text-decoration: underline;
+}
+
+.uwu{
+    border-radius: 12px;
+    color: #9c8e88;
+}
