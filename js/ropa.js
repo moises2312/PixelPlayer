@@ -2,7 +2,7 @@ $(document).ready(function(){
     $.get('http://fakestoreapi.com/products',function(data){
     $.each(data, function(i, item){
 
-        html = `                <div class="col-sm12 col-md6 col-lg4 col-xl3">
+        html = `<div class="col-sm12 col-md6 col-lg4 col-xl3">
         <div class="card" style="width: 18rem;">
             <img src="${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
