@@ -367,3 +367,8 @@ a {
     border-radius: 12px;
     color: #9c8e88;
 }
+
+.error {
+    color: red;
+    font-weight: bolder;
+}
