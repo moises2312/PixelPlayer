@@ -113,6 +113,8 @@ $(document).ready(function () {
   });
 });
 
+//////////////////////////////////////////////////////////////////////Registrarrr
+
 
 $(document).ready(function () {
   // Agregar método de validación para RUT chileno
