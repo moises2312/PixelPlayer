@@ -376,3 +376,8 @@ a {
     color: red;
     font-weight: bolder;
 }
+
+.campo {
+    text-align: left;
+    margin-bottom: 1em; /* Opcional: añade espacio entre los campos */
+}
