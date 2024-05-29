@@ -317,7 +317,12 @@ $(document).ready(function() {
 
     return dv === dvCalculado;
   }, "El RUT no es válido (escriba sin puntos y con guión)");
-
+  $.validator.addMethod("pwcheck", function(value) {
+    return /[A-Z]/.test(value) 
+        && /[a-z]/.test(value) 
+        && /[0-9]/.test(value) 
+        && /[^A-Za-z0-9]/.test(value) 
+  }, "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
   // Agregar método de validación para correo
   $.validator.addMethod("emailCompleto", function(value, element) {
 
@@ -337,7 +342,10 @@ $(document).ready(function() {
     return this.optional(element) || /^[a-zA-Z\s]*$/.test(value);
 
   }, "Sólo se permiten letras y espacios en blanco.");
-
+  // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
+  document.getElementById('rut').addEventListener('keyup', function(e) {
+    e.target.value = e.target.value.toUpperCase();
+  });
   // Validar formulario con JQuery
   $("form.needs-validation").validate({
     rules: {
@@ -365,9 +373,9 @@ $(document).ready(function() {
       },
       password: {
         required: true,
-        minlength: 5,
-        maxlength: 15,
-      }
+        minlength: 8,
+        pwcheck: true
+      },
     }, // --> Fin de reglas
     messages: {
       id: {
@@ -386,17 +394,16 @@ $(document).ready(function() {
         soloLetras: "El apellido sólo puede contener letras y espacios en blanco",
       },
       correo: {
-        required: "El correo es un campo requerido",
-        emailCompleto: "El formato del correo no es válido",
+        required: "Por favor, ingrese su correo electrónico",
+        email: "Por favor, ingrese un correo electrónico válido"
       },
       direccion: {
         required: "La dirección es un campo requerido",
       },
       password: {
-        required: "La contraseña es un campo requerido",
-        minlength: "La contraseña debe tener un mínimo de 5 caracteres",
-        maxlength: "La contraseña debe tener un máximo de 15 caracteres",
-      }
+        required: "Por favor, ingrese una contraseña",
+        minlength: "La contraseña debe tener al menos 8 caracteres"
+      },
     }, // --> Fin de mensajes
   });
 });
