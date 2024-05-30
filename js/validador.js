@@ -62,6 +62,12 @@ $(document).ready(function () {
     "El formato del correo no es válido"
   );
 
+  $.validator.addMethod("soloLetras", function(value, element) {
+
+    return this.optional(element) || /^[a-zA-Z\s]*$/.test(value);
+
+  }, "Sólo se permiten letras y espacios en blanco.");
+
   // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
   if (document.getElementById("rut")) {
     document.getElementById("rut").addEventListener("keyup", function (e) {
@@ -78,10 +84,12 @@ $(document).ready(function () {
       nombre: {
         required: true,
         minlength: 3,
+        soloLetras: true,
       },
       apellido: {
         required: true,
         minlength: 3,
+        soloLetras: true,
       },
       correo: {
         required: true,
@@ -109,10 +117,12 @@ $(document).ready(function () {
       nombre: {
         required: "Por favor, ingrese su nombre",
         minlength: "El nombre debe tener al menos 3 caracteres",
+        soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
       },
       apellido: {
         required: "Por favor, ingrese su apellido",
         minlength: "El apellido debe tener al menos 3 caracteres",
+        soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
       },
       correo: {
         required: "Por favor, ingrese su correo electrónico",
@@ -144,10 +154,12 @@ $(document).ready(function () {
       nombre: {
         required: true,
         minlength: 3,
+        soloLetras: true,
       },
       apellido: {
         required: true,
         minlength: 3,
+        soloLetras: true,
       },
       correo: {
         required: true,
@@ -175,10 +187,12 @@ $(document).ready(function () {
       nombre: {
         required: "Por favor, ingrese su nombre",
         minlength: "El nombre debe tener al menos 3 caracteres",
+        soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
       },
       apellido: {
         required: "Por favor, ingrese su apellido",
         minlength: "El apellido debe tener al menos 3 caracteres",
+        soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
       },
       correo: {
         required: "Por favor, ingrese su correo electrónico",
@@ -238,6 +252,7 @@ $(document).ready(function () {
       nombre: {
         required: true,
         soloLetras: true,
+        
       },
       apellido: {
         required: true,
@@ -289,7 +304,7 @@ $(document).ready(function () {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////admin producto
 
-  $("#productForm").validate({
+  $("#validProductos").validate({
     rules: {
       id: {
         required: true,
@@ -308,39 +323,43 @@ $(document).ready(function () {
         min: 0,
         number: true,
       },
+      descuento_oferta: {
+        required: true,
+        min: 0,
+        number: true,
+      },
+      descuento_subscrito: {
+        required: true,
+        min: 0,
+        number: true,
+      },
     }, // --> Fin de reglas
     messages: {
       id: {
         required: "El ID es un campo requerido",
       },
-      rut: {
-        required: "El RUT es un campo requerido",
-        rutChileno: "El RUT no es válido (escriba sin puntos y con guión)",
+      categoria: {
+        required: "La categoria es un campo requerido",
       },
       nombre: {
         required: "El nombre es un campo requerido",
-        soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
       },
-      apellido: {
-        required: "El apellido es un campo requerido",
-        soloLetras:
-          "El apellido sólo puede contener letras y espacios en blanco",
+      descripcion: {
+        required: "La descripcion es un campo requerido",
       },
-      correo: {
-        required: "Por favor, ingrese su correo electrónico",
-        email: "Por favor, ingrese un correo electrónico válido",
+      precio: {
+        required: "El precio es un campo obligatorio",
       },
-      direccion: {
-        required: "La dirección es un campo requerido",
+      descuento_oferta: {
+        required: "El descuento oferta es un campo obligatorio",
       },
-      password: {
-        required: "Por favor, ingrese una contraseña",
-        minlength: "La contraseña debe tener al menos 8 caracteres",
+      descuento_subscrito: {
+        required: "El el descuento por subscripcion es un campo obligatorio",
       },
     }, // --> Fin de mensajes
   });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////admin producto
+////////////////////////////////////////////////////////////////////////////////////////////////////////admin bodega
 
   $("#product-bodega").validate({
     rules: {
